@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
+use LDAP\Result;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,8 @@ Route::post('/empleado',[EmployeeController::class,'store'])->name("empleado.sto
 Route::get('/factura',[InvoiceController::class,'create']);
 Route::post('/factura',[InvoiceController::class,'store'])->name("factura.store");
 
+Route::get('/calif',[QualificationController::class,'create']);
+Route::post('/calif',[QualificationController::class,'store'])->name("calif.store");
+
+Route::get('/cuad',[ResultController::class,'create']);
+Route::post('/cuad',[ResultController::class,'store'])->name("cuad.store");

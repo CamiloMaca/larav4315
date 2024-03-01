@@ -11,7 +11,7 @@ class InvoiceController extends Controller
     } 
     public function store(Request $request){
         $factura=new Invoice();
-        $factura->client_id=$request->input("client_id");
+        $factura->client_id=$request->client_id;
         $factura->total=$request->total;
         $factura->description=$request->description;
         $factura->save();
